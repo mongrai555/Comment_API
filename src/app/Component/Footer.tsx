@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function Footer({txt}: {txt: string}) {
+export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-6 py-12">

@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Comsci - Computer Science Platform
 
-## Getting Started
+A modern Next.js website for computer science content and tutorials.
 
-First, run the development server:
+## 🚀 Technologies Used
+
+- **Next.js 15** - React framework with App Router
+- **React 19** - UI library
+- **TypeScript** - Type safety
+- **Tailwind CSS 4** - Styling
+- **Zustand** - State management
+- **Axios** - HTTP client
+- **Turbopack** - Fast bundler
+
+## 📦 Installation
+
+```bash
+npm install
+```
+
+## 🛠️ Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+## 🚀 Deployment to Vercel
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
+1. Create a [Vercel account](https://vercel.com)
+2. Install Vercel CLI: `npm install -g vercel`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Deploy Steps
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### Option 1: Using Vercel CLI
+```bash
+# Login to Vercel
+vercel login
 
-## Deploy on Vercel
+# Deploy
+vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Follow the prompts:
+# - Link to existing project? (Y/N)
+# - What's your project's name? comsci-platform
+# - In which directory is your code? ./
+# - Want to override settings? (N)
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### Option 2: Using GitHub Integration
+1. Push your code to GitHub
+2. Go to [Vercel Dashboard](https://vercel.com/dashboard)
+3. Click "New Project"
+4. Import from GitHub
+5. Select your repository
+6. Click "Deploy"
+
+### Environment Variables (if needed)
+No environment variables required for basic functionality.
+
+### Build Settings
+Vercel will automatically detect Next.js and use these settings:
+- **Build Command**: `npm run build`
+- **Output Directory**: `.next`
+- **Install Command**: `npm install`
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── Component/         # Reusable components
+│   ├── posts/            # Blog posts pages
+│   ├── about/            # About page
+│   ├── admin/            # Admin pages
+│   ├── globals.css       # Global styles
+│   ├── layout.tsx        # Root layout
+│   └── page.tsx          # Homepage
+├── services/             # API services
+└── store/               # State management
+```
+
+## 🎨 Features
+
+- **Responsive Design** - Works on all devices
+- **Modern UI** - Clean and professional design
+- **Fast Performance** - Optimized with Turbopack
+- **SEO Friendly** - Built-in Next.js SEO
+- **Type Safe** - Full TypeScript support
+
+## 🔧 Development Notes
+
+- The project uses Next.js App Router
+- Styling is done with Tailwind CSS
+- State management with Zustand
+- API calls handled by Axios
+- Build warnings are expected and don't affect deployment
+
+## 📝 License
+
+This project is for educational purposes.

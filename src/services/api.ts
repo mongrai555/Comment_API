@@ -176,7 +176,7 @@ export class ApiService {
   /**
    * จัดการ Error และแปลงเป็น readable message
    */
-  private handleError(error: any, defaultMessage: string): Error {
+  private handleError(error: unknown, defaultMessage: string): Error {
     if (axios.isAxiosError(error)) {
       if (error.response) {
         // Server responded with error status
@@ -190,7 +190,9 @@ export class ApiService {
     }
     
     // Other errors
-    return new Error(error.message || defaultMessage);
+    return new Error(
+      error instanceof Error ? error.message : defaultMessage
+    );
   }
 
   /**
